@@ -40,7 +40,7 @@ export default function Vote() {
                     <h1 className="w-full text-center text-5xl text-white font-bold">Enter the stall number: </h1>
                 </div>
                 <div className="mt-5">
-                    <input max={52} min="1" className="rounded-xl p-5 w-[300px] h-20 bg-white text-black text-center text-2xl mx-auto" type="number" placeholder="Stall Number" onChange={(e) => setStall(parseInt(e.target.value))} />
+                    <input max={52} min={1} className="rounded-xl p-5 w-[300px] h-20 bg-white text-black text-center text-2xl mx-auto" type="number" placeholder="Stall Number" onChange={(e) => setStall(parseInt(e.target.value))} />
                 </div>
                 <div className="mt-10">
 
