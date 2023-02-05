@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'building': "url('/utils/building.pin')",
-      },
       'fontFamily': {
         'pop': ['Poppins']
       }
