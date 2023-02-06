@@ -12,8 +12,7 @@ const Button: React.FC<ButtonProps> = (props) => {
             return;
             // Check if the stall number is valid
         }
-        console.log(props.stall);
-        fetch("<url placeholder>", {
+        fetch("/api/backend", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -23,7 +22,11 @@ const Button: React.FC<ButtonProps> = (props) => {
             })
         }).then((res) => {
             if (res.status === 200) {
-                router.push("/vote-success");
+                res.json().then((data) => {
+                    console.log(data.message);
+                })
+
+                // router.push("/vote-success");
             } else {
                 router.push("/vote-fail");
             }
